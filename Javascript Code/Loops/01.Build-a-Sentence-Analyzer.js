@@ -61,4 +61,4 @@ function getWordCount(sentence) {
 }
 
 const wordCount = getWordCount("I love freeCodeCamp");
-console.log(wordCount);
+console.log(`Word Count: ${wordCount}`);
