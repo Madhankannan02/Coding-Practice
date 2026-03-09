@@ -9,6 +9,7 @@ var isAnagram = function(s, t) {
     }
 
     let chars = new Array(26).fill(0);
+    console.log(chars);
 
     for(let i=0; i<s.length; i++){
         chars[s.charCodeAt(i) - 97]++;
