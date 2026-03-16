@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+     .todo-list {
+         list-style-type: none;
+         padding: 20px;
+         font-family: sans-serif;
+     }
+
+     .todo-list > li {
+         margin-bottom: 15px;
+         padding: 10px;
+         border-bottom: 1px solid #eee;
+     }
+
+     .sub-item {
+         list-style-type: none;
+         margin-top: 5px;
+     }
+
+     .sub-item-link {
+         text-decoration: none;
+     }
+
+     .sub-item-link:link {
+         color: #007bff;
+     }
+
+     .sub-item-link:visited {
+         color: #6f42c1;
+     }
+
+     .sub-item-link:hover {
+         color: #e83e8c;
+     }
+
+     .sub-item-link:focus {
+         outline: 2px solid #fd7e14;
+         outline-offset: 2px;
+     }
+
+     .sub-item-link:active {
+         color: #28a745;
+     }
+    </style>
+
+
+</head>
+<body>
+
+    <ul class="todo-list">
+        <li>
+            <input type="checkbox" id="task-1">
+            <label for="task-1">Design Homepage</label>
+            <ul class="sub-item">
+                <li><a href="https://google.com" class="sub-item-link" target="_blank">View Resources</a></li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="task-2">
+            <label for="task-2">Develop Backend</label>
+            <ul class="sub-item">
+                <li><a href="https://github.com" class="sub-item-link" target="_blank">Check Repo</a></li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="task-3">
+            <label for="task-3">Write Documentation</label>
+            <ul class="sub-item">
+                <li><a href="https://wikipedia.org" class="sub-item-link" target="_blank">Research Wiki</a></li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="task-4">
+            <label for="task-4">Deploy Application</label>
+            <ul class="sub-item">
+                <li><a href="https://vercel.com" class="sub-item-link" target="_blank">Hosting Panel</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
