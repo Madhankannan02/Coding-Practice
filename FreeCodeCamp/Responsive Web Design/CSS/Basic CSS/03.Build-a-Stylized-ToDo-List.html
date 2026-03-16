@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylized To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles.css">
 
-    <style>
-     .todo-list {
-         list-style-type: none;
-         padding: 20px;
-         font-family: sans-serif;
-     }
+  <style>
+   body{
+   font-family: Arial, sans-serif;
+   padding:20px;
+   }
 
-     .todo-list > li {
-         margin-bottom: 15px;
-         padding: 10px;
-         border-bottom: 1px solid #eee;
-     }
+   .todo-list{
+   list-style:none;
+   padding:0;
+   }
 
-     .sub-item {
-         list-style-type: none;
-         margin-top: 5px;
-     }
+   .sub-item{
+   list-style:none;
+   padding-left:20px;
+   }
 
-     .sub-item-link {
-         text-decoration: none;
-     }
+   .sub-item-link{
+   text-decoration:none;
+   }
 
-     .sub-item-link:link {
-         color: #007bff;
-     }
+   .sub-item-link:link{
+   color:#1a73e8;
+   }
 
-     .sub-item-link:visited {
-         color: #6f42c1;
-     }
+   .sub-item-link:visited{
+   color:#8e24aa;
+   }
 
-     .sub-item-link:hover {
-         color: #e83e8c;
-     }
+   .sub-item-link:hover{
+   color:#e53935;
+   }
 
-     .sub-item-link:focus {
-         outline: 2px solid #fd7e14;
-         outline-offset: 2px;
-     }
+   .sub-item-link:active{
+   color:#188038;
+   }
 
-     .sub-item-link:active {
-         color: #28a745;
-     }
-    </style>
-
+   .sub-item-link:focus{
+   outline:2px solid #f9ab00;
+   }
+  </style>
 
 </head>
 <body>
 
-    <ul class="todo-list">
+  <ul class="todo-list">
+    <li>
+      <input type="checkbox" id="task1">
+      <label for="task1">Complete HTML Practice</label>
+      <ul class="sub-item">
         <li>
-            <input type="checkbox" id="task-1">
-            <label for="task-1">Design Homepage</label>
-            <ul class="sub-item">
-                <li><a href="https://google.com" class="sub-item-link" target="_blank">View Resources</a></li>
-            </ul>
+          <a href="https://developer.mozilla.org" class="sub-item-link" target="_blank">MDN Docs</a>
         </li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="task2">
+      <label for="task2">Practice CSS Selectors</label>
+      <ul class="sub-item">
         <li>
-            <input type="checkbox" id="task-2">
-            <label for="task-2">Develop Backend</label>
-            <ul class="sub-item">
-                <li><a href="https://github.com" class="sub-item-link" target="_blank">Check Repo</a></li>
-            </ul>
+          <a href="https://css-tricks.com" class="sub-item-link" target="_blank">CSS Tricks</a>
         </li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="task3">
+      <label for="task3">Build a Small Project</label>
+      <ul class="sub-item">
         <li>
-            <input type="checkbox" id="task-3">
-            <label for="task-3">Write Documentation</label>
-            <ul class="sub-item">
-                <li><a href="https://wikipedia.org" class="sub-item-link" target="_blank">Research Wiki</a></li>
-            </ul>
+          <a href="https://github.com" class="sub-item-link" target="_blank">Repository</a>
         </li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="task4">
+      <label for="task4">Learn Responsive Design</label>
+      <ul class="sub-item">
         <li>
-            <input type="checkbox" id="task-4">
-            <label for="task-4">Deploy Application</label>
-            <ul class="sub-item">
-                <li><a href="https://vercel.com" class="sub-item-link" target="_blank">Hosting Panel</a></li>
-            </ul>
+          <a href="https://freecodecamp.org" class="sub-item-link" target="_blank">freeCodeCamp</a>
         </li>
-    </ul>
+      </ul>
+    </li>
+  </ul>
 
 </body>
 </html>
