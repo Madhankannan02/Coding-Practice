@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog Post Card</title>
+
+    <style>
+     body {
+          background-color: #f0f2f5; /* Requirement: Non-white background */
+          font-family: sans-serif;
+          display: flex;
+          justify-content: center;
+          padding: 50px;
+      }
+
+      .blog-post-card {
+          background-color: white;
+          border-radius: 15px;
+          width: 350px;
+          text-align: center;
+          overflow: hidden; /* Keeps the image corners rounded at the top */
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .post-img {
+          width: 100%;
+          border-bottom: 2px solid #eeeeee;
+          display: block; /* Removes tiny gap at bottom of image */
+      }
+
+      .post-content {
+          padding: 20px;
+      }
+
+      .post-title {
+          color: #333333;
+          margin: 15px;
+      }
+
+      .post-excerpt {
+          color: #666666;
+          margin: 15px;
+          line-height: 1.5;
+      }
+
+      .read-more {
+          display: inline-block;
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          margin: 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+      }
+
+      .read-more:hover {
+          background-color: #0056b3;
+      }
+    </style>
+
+</head>
+<body>
+    <div class="blog-post-card">
+        <img class="post-img" src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg" alt="A beautiful landscape">
+        
+        <div class="post-content">
+            <h2 class="post-title">Exploring the Great Outdoors</h2>
+            <p class="post-excerpt">Discover the hidden gems of the wilderness and learn how to prepare for your next big adventure.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
