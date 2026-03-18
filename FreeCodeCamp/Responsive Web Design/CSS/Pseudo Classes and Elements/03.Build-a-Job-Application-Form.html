@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     .container {
+         max-width: 600px;
+         margin: 20px auto;
+         padding: 20px;
+         font-family: sans-serif;
+     }
+
+     input, select, textarea {
+         display: block;
+         width: 100%;
+         margin-bottom: 15px;
+         padding: 10px;
+         border: 1px solid #ccc;
+     }
+
+     input:first-of-type {
+         border-radius: 15px;
+     }
+
+     input:focus, textarea:focus {
+         border-color: blue;
+         outline: none;
+     }
+
+     input:invalid, select:invalid, textarea:invalid {
+         border-color: red;
+     }
+
+     input:valid, select:valid, textarea:valid {
+         border-color: green;
+     }
+
+     button:hover {
+         background-color: #333;
+         color: white;
+         cursor: pointer;
+     }
+
+     .radio-group input[type="radio"]:checked {
+         border-color: blue;
+         background-color: blue;
+         box-shadow: 0 0 5px blue;
+     }
+
+     .radio-group input[type="radio"]:checked + label {
+         color: blue;
+     }
+
+     .radio-group {
+         border: none;
+         margin-bottom: 15px;
+     }
+
+     .radio-group input {
+         width: auto;
+         display: inline-block;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="application-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="position">Job Position</label>
+            <select id="position" name="position" required>
+                <option value="">Select a position</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+            </select>
+
+            <fieldset class="radio-group">
+                <legend>Availability</legend>
+                <input type="radio" id="full-time" name="availability" value="full-time">
+                <label for="full-time">Full-Time</label>
+                
+                <input type="radio" id="part-time" name="availability" value="part-time">
+                <label for="part-time">Part-Time</label>
+            </fieldset>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
