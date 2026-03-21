@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     #playing-cards {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 20px;
+         padding: 20px;
+     }
+
+     .card {
+         display: flex;
+         justify-content: space-between;
+         width: 150px;
+         height: 220px;
+         border: 2px solid black;
+         border-radius: 10px;
+         padding: 10px;
+         font-family: sans-serif;
+         font-weight: bold;
+     }
+
+     .left {
+         align-self: flex-start;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .middle {
+         display: flex;
+         flex-direction: column;
+         align-self: center;
+         font-size: 2rem;
+     }
+
+     .right {
+         align-self: flex-end;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         transform: rotate(180deg);
+     }
+
+     .red {
+         color: red;
+         border-color: red;
+     }
+    </style>
+</head>
+<body>
+    <main id="playing-cards">
+        <div class="card">
+            <div class="left">A<span>♠</span></div>
+            <div class="middle">
+                <span>♠</span>
+            </div>
+            <div class="right"><span>♠</span>A</div>
+        </div>
+        <div class="card red">
+            <div class="left">K<span>♥</span></div>
+            <div class="middle">
+                <span>♥</span>
+            </div>
+            <div class="right"><span>♥</span>K</div>
+        </div>
+        <div class="card">
+            <div class="left">10<span>♣</span></div>
+            <div class="middle">
+                <span>♣</span>
+                <span>♣</span>
+            </div>
+            <div class="right"><span>♣</span>10</div>
+        </div>
+    </main>
+</body>
+</html>
