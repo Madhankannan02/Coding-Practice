@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   span {
+     display: inline-block;
+   }
+
+   tr[class="read"] {
+     background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+   }
+
+   tr[class="to-read"] {
+     background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+   }
+
+   tr[class="in-progress"] {
+     background-image: linear-gradient(to right, #fddb92, #d1fdff);
+   }
+
+   tr[class="to-read"] span[class="status"] {
+     border: 1px solid purple;
+     background-image: linear-gradient(to right, pink, lightblue);
+   }
+
+   tr[class="read"] span[class="status"] {
+     border: 1px solid green;
+     background-image: linear-gradient(to right, lightgreen, lime);
+   }
+
+   tr[class="in-progress"] span[class="status"] {
+     border: 1px solid orange;
+     background-image: linear-gradient(to right, orange, yellow);
+   }
+
+   span[class="status"],
+   span[class^="rate"] {
+     height: 20px;
+     width: 90px;
+     padding: 5px;
+   }
+
+   span[class^="rate"] > span {
+     border: 1px solid black;
+     border-radius: 50%;
+     margin: 2px;
+     height: 10px;
+     width: 10px;
+     background-color: lightgray;
+   }
+
+   span[class~="one"] > span:first-child {
+     background-image: linear-gradient(to right, gold, orange);
+   }
+
+   span[class~="two"] > span:nth-child(-n+2) {
+     background-image: linear-gradient(to right, gold, orange);
+   }
+
+   span[class~="three"] > span {
+     background-image: linear-gradient(to right, gold, orange);
+   }
+  </style>
+</head>
+<body>
+
+<h1>Book Inventory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Rate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="read">
+      <td>Atomic Habits</td>
+      <td>James Clear</td>
+      <td>Self-help</td>
+      <td><span class="status">Read</span></td>
+      <td>
+        <span class="rate three">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="to-read">
+      <td>The Alchemist</td>
+      <td>Paulo Coelho</td>
+      <td>Fiction</td>
+      <td><span class="status">To Read</span></td>
+      <td>
+        <span class="rate">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="in-progress">
+      <td>Clean Code</td>
+      <td>Robert C. Martin</td>
+      <td>Programming</td>
+      <td><span class="status">In Progress</span></td>
+      <td>
+        <span class="rate">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
