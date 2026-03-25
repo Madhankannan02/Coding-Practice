@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.5;
+        background-color: #f1f1f1;
+      }
+
+      #main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        min-width: 280px;
+        max-width: 300px;
+      }
+
+      #navbar {
+        height: 100%;
+        border-right: solid 2.5px #333;
+      }
+
+      #navbar>h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      #navbar ul {
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 90%;
+        list-style: none;
+      }
+
+      #navbar ul li {
+        border: solid 1.3px #333;
+      }
+
+      #main-header #navbar ul li a {
+        display: block;
+        text-align: left;
+        padding: .8rem 1rem .8rem 2rem;
+        cursor: pointer;
+        color: #222;
+        text-decoration: none;
+      }
+
+
+      #main-doc {
+        position: absolute;
+        margin-left: 320px;
+        padding: 2rem 1rem;
+      }
+
+      #main-doc .main-section header {
+        font-size: 2rem;
+        padding: 1rem 0;
+      }
+
+      #main-doc .main-section .main-article {
+        padding-left: 1.5rem;
+        margin-bottom: .5rem;
+        color: #222;
+      }
+
+      #main-doc .main-section .main-article p {
+        margin-bottom: 1rem;
+      }
+
+      #main-doc .main-section .main-article ul {
+        margin: 1.3rem 0 0 1.2rem;
+      }
+
+      #main-doc .main-section .main-article ul li {
+        margin-bottom: 1rem;
+      }
+
+      #main-doc .main-section .main-article code {
+        display: block;
+        padding: 1.5rem;
+        text-align: left;
+        background-color: #ddd;
+        border-radius: 7px;
+        margin-bottom: 1rem;
+      }
+
+      #main-doc .main-section:last-child .main-article ul {
+        margin: .5rem 0 1.5rem 3rem;
+        padding: 0;
+      }
+
+      #creator {
+        text-align: left;
+        padding: 2rem 0 0;
+      }
+
+      @media (max-width: 600px) {
+        #main-header {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          margin: 0;
+          max-width: 95%;
+          max-height: 400px;
+        }
+
+        #navbar {
+          width: 100%;
+          margin: 0;
+        }
+
+        #main-doc {
+          position: relative;
+          margin-left: 0px;
+          padding: 2rem 1rem;
+          margin-top: 410px;
+        }
+
+      }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Technical Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Setup_and_Installation">Setup and Installation</a>
+        <a class="nav-link" href="#Basic_Syntax">Basic Syntax</a>
+        <a class="nav-link" href="#Advanced_Topics">Advanced Topics</a>
+        <a class="nav-link" href="#Best_Practices">Best Practices</a>
+    </nav>
+
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Welcome to the technical documentation.</p>
+            <p>This guide provides an overview of key concepts.</p>
+            <p>Understanding the basics will help in navigating through this documentation.</p>
+        </section>
+        
+        <section id="Setup_and_Installation" class="main-section">
+            <header>Setup and Installation</header>
+            <p>Follow these steps to set up:</p>
+            <code>npm install package-name</code>
+            <p>Ensure that you have the latest version installed before proceeding.</p>
+            <ul>
+                <li>Download the necessary files</li>
+                <li>Run the installation script</li>
+            </ul>
+            <code>python setup.py install</code>
+        </section>
+        
+        <section id="Basic_Syntax" class="main-section">
+            <header>Basic Syntax</header>
+            <p>Understanding syntax is crucial.</p>
+            <p>Here is an example of a simple function:</p>
+            <code>function example() { return true; }</code>
+            <p>Use variables to store data efficiently.</p>
+            <code>let x = 10;</code>
+            <ul>
+                <li>Variables</li>
+                <li>Functions</li>
+            </ul>
+        </section>
+        
+        <section id="Advanced_Topics" class="main-section">
+            <header>Advanced Topics</header>
+            <p>More complex concepts.</p>
+            <p>Object-oriented programming helps structure code better.</p>
+            <code>class Example { constructor() { this.value = 10; } }</code>
+            <p>Understanding asynchronous programming is key.</p>
+            <code>async function fetchData() { return await fetch(url); }</code>
+            <ul>
+                <li>Closures</li>
+                <li>Asynchronous Programming</li>
+            </ul>
+        </section>
+        
+        <section id="Best_Practices" class="main-section">
+            <header>Best Practices</header>
+            <p>Tips for writing efficient code.</p>
+            <p>Always follow naming conventions and keep code readable.</p>
+            <code>const bestPractice = () => console.log("Follow guidelines");</code>
+            <p>Use comments wisely and document your code.</p>
+            <code>// This function logs a message
+function logMessage() { console.log("Hello World"); }</code>
+            <ul>
+                <li>Code readability</li>
+                <li>Performance optimization</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
