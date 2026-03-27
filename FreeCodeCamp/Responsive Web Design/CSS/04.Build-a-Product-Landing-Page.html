@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     /* General Styles */
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+
+      /* Header */
+      #header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: #333;
+          color: white;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+      }
+
+      #header-img {
+          height: 50px;
+      }
+
+      /* Navbar */
+      #nav-bar {
+          display: flex;
+          gap: 20px;
+      }
+
+      .nav-link {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+      }
+
+      .nav-link:hover {
+          text-decoration: underline;
+      }
+
+      /* Main Content */
+      main {
+          padding-top: 80px; /* To prevent content from being hidden behind fixed navbar */
+      }
+
+      /* Features & Pricing */
+      .feature, .pricing-plan {
+          border: 1px solid #ddd;
+          padding: 20px;
+          margin: 10px;
+          border-radius: 10px;
+      }
+
+      /* Signup Form */
+      #form {
+          margin-top: 20px;
+      }
+
+      #email {
+          padding: 10px;
+          font-size: 1rem;
+          width: 250px;
+          margin-bottom: 10px;
+      }
+
+      #submit {
+          padding: 10px 20px;
+          font-size: 1rem;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+
+      #submit:hover {
+          background-color: #218838;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 720px) {
+          #nav-bar {
+              flex-direction: column;
+              align-items: center;
+          }
+      }
+
+      @media (max-width: 550px) {
+          .hero-title {
+              font-size: 6rem;
+          }
+
+          .nav-link {
+              font-size: 1.5rem;
+          }
+
+          #email {
+              width: 200px;
+          }
+      }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <img src="logo.png" alt="Company Logo" id="header-img">
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to Our Product</h1>
+        <p>The best product for your needs</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" id="submit" value="Subscribe">
+        </form>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>Quality Materials</h3>
+            <p>Our products are made from the finest materials.</p>
+        </div>
+        <div class="feature">
+            <h3>Affordable Pricing</h3>
+            <p>We offer the best prices for high-quality products.</p>
+        </div>
+        <div class="feature">
+            <h3>Fast Delivery</h3>
+            <p>Get your product delivered in record time.</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-section">
+        <h2>How It Works</h2>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/example" 
+            title="Product Video" frameborder="0" allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="price-card">
+            <h3>Basic</h3>
+            <p>$9.99/month</p>
+            <button>Sign Up</button>
+        </div>
+        <div class="price-card">
+            <h3>Pro</h3>
+            <p>$19.99/month</p>
+            <button>Sign Up</button>
+        </div>
+        <div class="price-card">
+            <h3>Premium</h3>
+            <p>$29.99/month</p>
+            <button>Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
