@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Availability Table</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   :root {
+     --color0: #f8d7da;
+     --color1: #f5c6cb;
+     --color2: #ffeeba;
+     --color3: #c3e6cb;
+     --color4: #a1e3a1;
+     --color5: #28a745;
+
+     --solid-border: 2px solid black;
+     --dashed-border: 2px dashed gray;
+   }
+
+   body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+   }
+
+   table {
+     border-collapse: collapse;
+     margin: 20px auto;
+   }
+
+   th, td {
+     padding: 12px;
+     width: 100px;
+     text-align: center;
+   }
+
+   /* Time column */
+   .time {
+     font-weight: bold;
+   }
+
+   /* Availability colors */
+   .available-0 { background-color: var(--color0); }
+   .available-1 { background-color: var(--color1); }
+   .available-2 { background-color: var(--color2); }
+   .available-3 { background-color: var(--color3); }
+   .available-4 { background-color: var(--color4); }
+   .available-5 { background-color: var(--color5); }
+
+   /* Row styles */
+   .sharp td {
+     border-bottom: var(--solid-border);
+   }
+
+   .half td {
+     border-bottom: var(--dashed-border);
+   }
+
+   /* Legend */
+   #legend {
+     margin-top: 20px;
+   }
+
+   #legend-gradient {
+     height: 20px;
+     width: 300px;
+     margin: 10px auto;
+     background-image: linear-gradient(
+       to right,
+       var(--color0) 0% 16%,
+       var(--color1) 16% 32%,
+       var(--color2) 32% 48%,
+       var(--color3) 48% 64%,
+       var(--color4) 64% 80%,
+       var(--color5) 80% 100%
+     );
+   }
+  </style>
+</head>
+<body>
+
+<h1>Team Availability</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+
+  <tr class="sharp">
+    <th class="time">09:00</th>
+    <td class="available-1"></td>
+    <td class="available-3"></td>
+    <td class="available-5"></td>
+  </tr>
+
+  <tr class="half">
+    <th class="time">11:00</th>
+    <td class="available-2"></td>
+    <td class="available-4"></td>
+    <td class="available-1"></td>
+  </tr>
+
+  <tr class="sharp">
+    <th class="time">13:00</th>
+    <td class="available-0"></td>
+    <td class="available-2"></td>
+    <td class="available-3"></td>
+  </tr>
+
+  <tr class="half">
+    <th class="time">15:00</th>
+    <td class="available-5"></td>
+    <td class="available-3"></td>
+    <td class="available-2"></td>
+  </tr>
+
+  <tr class="sharp">
+    <th class="time">17:00</th>
+    <td class="available-4"></td>
+    <td class="available-1"></td>
+    <td class="available-0"></td>
+  </tr>
+</table>
+
+<div id="legend">
+  <span>Availability</span>
+  <div id="legend-gradient"></div>
+</div>
+
+</body>
+</html>
