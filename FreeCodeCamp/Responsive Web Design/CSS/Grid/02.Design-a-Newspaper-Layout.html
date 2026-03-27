@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newspaper Layout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   .newspaper-layout {
+     display: grid;
+
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: auto 1fr 1fr 1fr;
+
+     grid-template-areas:
+       "title title title"
+       "feature-article feature-article cover-image"
+       "secondary-article secondary-article cover-image"
+       "small-article1 small-article2 small-article3";
+
+     gap: 15px;
+   }
+
+   /* Grid areas */
+   .title {
+     grid-area: title;
+   }
+
+   .feature-article {
+     grid-area: feature-article;
+   }
+
+   .secondary-article {
+     grid-area: secondary-article;
+   }
+
+   .cover-image {
+     grid-area: cover-image;
+   }
+
+   .small-article1 {
+     grid-area: small-article1;
+   }
+
+   .small-article2 {
+     grid-area: small-article2;
+   }
+
+   .small-article3 {
+     grid-area: small-article3;
+   }
+
+   /* Image styling */
+   .cover-image img {
+     max-width: 100%;
+     display: block;
+   }
+
+   /* Optional styling for appearance */
+   body {
+     font-family: Arial, sans-serif;
+     padding: 20px;
+   }
+
+   header, article, figure {
+     border: 1px solid #ccc;
+     padding: 10px;
+   }
+  </style>
+</head>
+<body>
+
+<main class="newspaper-layout">
+
+  <header class="title">
+    <h1>Daily Times</h1>
+  </header>
+
+  <article class="feature-article">
+    <h2>Main Headline</h2>
+    <p>This is the main feature article of the newspaper.</p>
+  </article>
+
+  <article class="secondary-article">
+    <h2>Secondary News</h2>
+    <p>This section contains additional important news.</p>
+  </article>
+
+  <article class="small-article1">
+    <h3>Article 1</h3>
+    <p>Short news content.</p>
+  </article>
+
+  <article class="small-article2">
+    <h3>Article 2</h3>
+    <p>Short news content.</p>
+  </article>
+
+  <article class="small-article3">
+    <h3>Article 3</h3>
+    <p>Short news content.</p>
+  </article>
+
+  <figure class="cover-image">
+    <img src="https://via.placeholder.com/300" alt="News Image">
+  </figure>
+
+</main>
+
+</body>
+</html>
