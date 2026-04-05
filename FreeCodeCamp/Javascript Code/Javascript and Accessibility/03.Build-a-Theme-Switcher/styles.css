@@ -1,0 +1,28 @@
+
+body.theme-light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.theme-dark {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.theme-ocean {
+  background-color: #0077be;
+  color: #ffffff;
+}
+
+
+#theme-dropdown:not([hidden]) {
+  display: block;
+  border: 1px solid #ccc;
+  width: fit-content;
+  cursor: pointer;
+}
+
+li[role="menuitem"]:hover {
+  background-color: #eee;
+  color: black;
+}
